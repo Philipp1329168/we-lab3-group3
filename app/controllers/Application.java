@@ -10,6 +10,8 @@ public class Application extends Controller {
     public static Result index() {
         return ok(index.render("Welcome to Jeopardy"));
     }
-    public static Result authentication() { return ok(authentication.apply()); }
+    public static Result authentication() {
+        return ok(authentication.apply());
+    }
 
 }
