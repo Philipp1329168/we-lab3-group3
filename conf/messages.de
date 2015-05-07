@@ -1,8 +1,15 @@
 login=Anmelden
+logout=Abmelden
 
 # Registration
-username=Benutzername
-password=Passwort
-registerhint=Nicht registriert?
-signup=Zur Registrierung
-signupinfo=Klicke hier um dich zu registrieren
+authentication.login=Login
+authentication.username=Benutzername:
+authentication.password=Passwort:
+authentication.signupquestion=Nicht registriert?
+authentication.signup=Zur Registrierung
+authentication.accessibility.signupinfo=Klicke hier um dich zu registrieren
+authentication.accessibility.jumptologin=Zum Login springen
+authentication.accessibility.signup=Registrieren
+authentication.accessibility.signup2=Registrierung
+authentication.msg.invalid=Falsche Kombination aus Benutzername und Passwort.
+authentication.msg.logoutsuccess=Abmelden erfolgreich
