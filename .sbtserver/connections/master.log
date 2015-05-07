@@ -1,49 +1,7 @@
-New log file opened at Thu May 07 09:25:00 CEST 2015 by 6600@PCUser
-Taking next connection to: 49939
-New client attempting to connect on port: 49940-49939
-  Address = /192.168.149.1:49939
-Handshake exception on socket: 49940
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Software caused connection abort: recv failed
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:170)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 49939
-New client attempting to connect on port: 49942-49939
-  Address = /192.168.149.1:49939
-This client on port 49942 has uuid 8b22890c-31cc-497b-ae01-01dc3a0ab8c5 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-8b22890c-31cc-497b-ae01-01dc3a0ab8c5
-Taking next connection to: 49939
-New client attempting to connect on port: 49941-49939
-  Address = /192.168.149.1:49939
-This client on port 49941 has uuid 2a316e47-f690-45aa-bacf-1483615bc533 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-8b22890c-31cc-497b-ae01-01dc3a0ab8c5, activator-2a316e47-f690-45aa-bacf-1483615bc533
-Taking next connection to: 49939
-New client attempting to connect on port: 49952-49939
-  Address = /192.168.149.1:49939
-Handshake exception on socket: 49952
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 49939
-New client attempting to connect on port: 49953-49939
-  Address = /192.168.149.1:49939
-This client on port 49953 has uuid afe405b9-7dc8-4a1c-a01d-105735026399 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-8b22890c-31cc-497b-ae01-01dc3a0ab8c5, play-fork-run-afe405b9-7dc8-4a1c-a01d-105735026399
-Taking next connection to: 49939
+New log file opened at Thu May 07 13:26:04 CEST 2015 by 3707@laptop
+Taking next connection to: 41444
+New client attempting to connect on port: 32794-41444
+  Address = /192.168.1.104:41444
+This client on port 32794 has uuid 762a930a-6544-423c-9ec5-5fad9998d679 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-762a930a-6544-423c-9ec5-5fad9998d679
+Taking next connection to: 41444
