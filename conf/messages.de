@@ -1,8 +1,36 @@
 login=Anmelden
+logout=Abmelden
+accessibility.navigation=Navigation
 
 # Registration
-username=Benutzername
-password=Passwort
-registerhint=Nicht registriert?
-signup=Zur Registrierung
-signupinfo=Klicke hier um dich zu registrieren
+authentication.login=Login
+authentication.username=Benutzername:
+authentication.password=Passwort:
+authentication.signupquestion=Nicht registriert?
+authentication.signup=Zur Registrierung
+authentication.accessibility.signupinfo=Klicke hier um dich zu registrieren
+authentication.accessibility.jumptologin=Zum Login springen
+authentication.accessibility.signup=Registrieren
+authentication.accessibility.signup2=Registrierung
+authentication.msg.invalid=Falsche Kombination aus Benutzername und Passwort.
+authentication.msg.logoutsuccess=Abmelden erfolgreich
+
+# Registration
+registration.title=Business Informatics Group Quiz - Registrieren
+registration.personaldata=Persönliche Daten
+registration.logindata=Login Daten
+registration.firstname=Vorname:
+registration.lastname=Nachname:
+registration.birthdate=Geburtstag:
+registration.birthdate.error=Verwenden Sie bitte folgendes Datumsformat: yyyy-mm-dd (z.B. 1992-02-25).
+registration.gender=Geschlecht:
+registration.gender.male=Männlich
+registration.gender.female=Weiblich
+registration.username=Benutzername*:
+registration.username.error=Der Benutzername muss mindestens 4 Zeichen und darf maximal 8 Zeichen enthalten.
+registration.password=Passwort*:
+registration.password.error=Das Passwort muss mindestens 4 Zeichen und darf maximal 8 Zeichen enthalten.
+registration.signup=Registrieren
+registration.datainfo=Mit "*" gekennzeichnete Felder sind Pflichtfelder
+registration.accessibility.jumptoregister=Zur Registrierung springen
+registration.accessibility.signup=Registrierung

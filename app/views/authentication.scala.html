@@ -1,4 +1,4 @@
-﻿﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 <head>
@@ -10,7 +10,7 @@
 </head>
 
 <body id="login-page">
-<a class="accessibility" href="#login">Zum Login springen</a>
+<a class="accessibility" href="#login">@Messages("authentication.accessibility.jumptologin")</a>
 <a class="accessibility" title="Klicke hier um dich zu registrieren" href="register.xhtml"
    accesskey="r">Registrieren</a>
 <!-- Header -->
@@ -23,27 +23,27 @@
 <!-- Content -->
 <div role="main">
     <section id="login" aria-labelledby="loginheading">
-        <h2 id="loginheading" class="accessibility">Login</h2>
+        <h2 id="loginheading" class="accessibility">@Messages("authentication.login")</h2>
 
         <form action="jeopardy.xhtml" method="post">
             <fieldset>
-                <legend id="logindata">Login</legend>
-                <label for="username">@Messages("username"):</label>
+                <legend id="logindata">@Messages("authentication.login")</legend>
+                <label for="username">@Messages("authentication.username")</label>
                 <input name="username" id="username" type="text" required="required"/>
-                <label for="password">@Messages("password"):</label>
+                <label for="password">@Messages("authentication.password")</label>
                 <input name="password" id="password" type="password" required="required"/>
                 <input name="login" id="loginsubmit" class="greenlink formlink clickable" type="submit"
-                       value="@Messages("login")"/>
+                       value="@Messages("authentication.login")"/>
             </fieldset>
         </form>
     </section>
     <!-- Register section -->
     <section id="registerforward" aria-labelledby="registerheading">
-        <h2 id="registerheading" class="accessibility">@Messages("signup")</h2>
+        <h2 id="registerheading" class="accessibility">@Messages("authentication.accessibility.signup")</h2>
 
-        <p id="registerhint">@Messages("registerhint")</p>
-        <a class="contentlink orangelink" title="@Messages("signupinfo")" href="register.xhtml"
-           accesskey="r">@Messages("signup")</a>
+        <p id="registerhint">@Messages("authentication.signupquestion")</p>
+        <a class="contentlink orangelink" title="@Messages("authentication.accessibility.signupinfo")" href="register.xhtml"
+           accesskey="r">@Messages("authentication.signup")</a>
     </section>
 </div>
 

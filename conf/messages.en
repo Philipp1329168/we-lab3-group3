@@ -1,8 +1,36 @@
 login=Login
+logout=Logout
+accessibility.navigation=Navigation
+
+# Authentication
+authentication.login=Login
+authentication.username=Username:
+authentication.password=Password:
+authentication.signupquestion=Want to sign up?
+authentication.signup=Sign up
+authentication.accessibility.signupinfo=Click here to sign up
+authentication.accessibility.jumptologin=Jump to login
+authentication.accessibility.signup=Sign up
+authentication.accessibility.signup2=Sign up
+authentication.msg.invalid=Invalid user or password
+authentication.msg.logoutsuccess=Logout successfull
 
 # Registration
-username=Username
-password=Password
-registerhint=Not registered?
-signup=Signup
-signupinfo=Click here to sign up
+registration.title=Business Informatics Group Quiz - Register
+registration.personaldata=Personal data
+registration.logindata=Login data
+registration.firstname=Firstname:
+registration.lastname=Lastname:
+registration.birthdate=Birthdate:
+registration.birthdate.error=Please use the following date format: yyyy-mm-dd (e.g. 1992-02-25).
+registration.gender=Gender:
+registration.gender.male=Male
+registration.gender.female=Female
+registration.username=Username*:
+registration.username.error=Username must be at least 4 characters long and can contain up to 8 characters.
+registration.password=Password*:
+registration.password.error=Password must be at least 4 characters long and can contain up to 8 characters.
+registration.signup=Sign up
+registration.datainfo=With "*" marked fields are required
+registration.accessibility.jumptoregister=Jump to sign up
+registration.accessibility.signup=Sign up
