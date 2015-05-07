@@ -1,2 +1,5 @@
 login=Anmelden
+
+# Registration
 username=Benutzername
+password=Passwort
