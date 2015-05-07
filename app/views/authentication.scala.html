@@ -33,17 +33,17 @@
                 <label for="password">@Messages("password"):</label>
                 <input name="password" id="password" type="password" required="required"/>
                 <input name="login" id="loginsubmit" class="greenlink formlink clickable" type="submit"
-                       value="Anmelden"/>
+                       value="@Messages("login")"/>
             </fieldset>
         </form>
     </section>
     <!-- Register section -->
     <section id="registerforward" aria-labelledby="registerheading">
-        <h2 id="registerheading" class="accessibility">Registrierung</h2>
+        <h2 id="registerheading" class="accessibility">@Messages("signup")</h2>
 
-        <p id="registerhint">Nicht registriert?</p>
+        <p id="registerhint">@Messages("registerhint")</p>
         <a class="contentlink orangelink" title="Klicke hier um dich zu registrieren" href="register.xhtml"
-           accesskey="r">Zur Registrierung</a>
+           accesskey="r">@Messages("signup")</a>
     </section>
 </div>
 

@@ -1,5 +1,7 @@
-login=Anmelden
+login=Login
 
 # Registration
 username=Username
 password=Password
+registerhint=Not registered?
+signup=Signup

@@ -3,3 +3,5 @@ login=Anmelden
 # Registration
 username=Benutzername
 password=Passwort
+registerhint=Nicht registriert?
+signup=Zur Registrierung
