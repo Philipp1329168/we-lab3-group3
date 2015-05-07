@@ -8,8 +8,7 @@ import views.html.*;
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render("Welcome to Jeopardy"));
+        return ok(index.render("WelcomePatrick"));
     }
-    public static Result authentication() { return ok(authentication.apply()); }
 
 }
