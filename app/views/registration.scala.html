@@ -36,26 +36,25 @@
 
     <form action="login.xhtml" method="post">
         <fieldset>
-            <legend>Persönliche Daten</legend>
-            <label for="firstname">Vorname:</label>
+            <legend>@Messages("registration.personalData")</legend>
+            <label for="firstname">@Messages("registration.firstname")</label>
             <input id="firstname" type="text" name="firstname"/>
 
-            <label for="lastname">Nachname:</label>
+            <label for="lastname">@Messages("registration.lastname")</label>
             <input id="lastname" type="text" name="lastname"/>
 
-            <label for="birthdate">Geburtstag:</label>
+            <label for="birthdate">@Messages("registration.birthdate")</label>
             <input id="birthdate" type="date" name="birthdate"/>
 
-            <div id="error_msg_birthdate" class="hide" role="alert">Verwenden Sie bitte folgendes Datumsformat:
-                dd.mm.yyyy (z.B. 24.12.2010).
+            <div id="error_msg_birthdate" class="hide" role="alert">@Messages("registration.birthdate.error")
             </div>
 
-            <label>Geschlecht:</label>
+            <label>@Messages("registration.gender")</label>
             <fieldset class="inputset">
                 <input type="radio" name="gender" id="male" value="m" checked="checked"/>
-                <label for="male">Männlich</label>
+                <label for="male">@Messages("registration.gender.male")</label>
                 <input type="radio" name="gender" id="female" value="f"/>
-                <label for="female">Weiblich</label>
+                <label for="female">@Messages("registration.gender.female")</label>
             </fieldset>
 
 
