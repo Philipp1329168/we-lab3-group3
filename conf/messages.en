@@ -1,5 +1,6 @@
 login=Login
 logout=Logout
+accessibility.navigation=Navigation
 
 # Authentication
 authentication.login=Login

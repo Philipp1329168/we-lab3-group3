@@ -11,7 +11,7 @@
     <script src="@routes.Assets.at(" javascripts/framework.js")" type="text/javascript"></script>
 </head>
 <body id="register-page">
-<a title="Zur Registrierung springen" class="accessibility" href="#register">Zur Registrierung springen</a>
+<a title="Zur Registrierung springen" class="accessibility" href="#register">@Messages("registration.accessibility.jumptoregister")</a>
 
 <!-- Header -->
 <header role="banner" aria-labelledby="bannerheading">
@@ -22,7 +22,7 @@
 
 <!-- Navigation -->
 <nav role="navigation" aria-labelledby="navheading">
-    <h2 id="navheading" class="accessibility">Navigation</h2>
+    <h2 id="navheading" class="accessibility">@Messages("accessibility.navigation")</h2>
     <ul>
         <li><a class="orangelink navigationlink" id="loginlink" title="Klicke hier um dich anzumelden"
                href="login.xhtml" accesskey="l">@Messages("login")</a></li>
@@ -32,7 +32,7 @@
 <!-- Content -->
 <div id="register" role="main">
     <!-- Register section -->
-    <h2 id="registerheading" class="accessibility">Registrierung</h2>
+    <h2 id="registerheading" class="accessibility">@Messages("registration.accessibility.signup")</h2>
 
     <form action="login.xhtml" method="post">
         <fieldset>

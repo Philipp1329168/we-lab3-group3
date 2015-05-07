@@ -1,5 +1,6 @@
 login=Anmelden
 logout=Abmelden
+accessibility.navigation=Navigation
 
 # Registration
 authentication.login=Login
