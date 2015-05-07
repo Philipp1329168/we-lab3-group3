@@ -141,7 +141,7 @@
             $(document).ready(function() {
                 // set last game
                 if(supportsLocalStorage()) {
-	                var lastGameMillis = parseInt(localStorage['lastGame'])
+	                var lastGameMillis = parseInt(localStorage['lastGame']);
 	                if(!isNaN(parseInt(localStorage['lastGame']))){
 	                    var lastGame = new Date(lastGameMillis);
 	                	$("#lastgame p").replaceWith('<p>Letztes Spiel: <time datetime="'
