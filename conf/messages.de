@@ -1,5 +1,7 @@
 login=Anmelden
 logout=Abmelden
+accessibility.logininfo=Klicke hier um dich anzumelden
+accessibility.logoutinfo=Klicke hier um dich abzumelden
 accessibility.navigation=Navigation
 
 # Registration
@@ -34,3 +36,14 @@ registration.signup=Registrieren
 registration.datainfo=Mit "*" gekennzeichnete Felder sind Pflichtfelder
 registration.accessibility.jumptoregister=Zur Registrierung springen
 registration.accessibility.signup=Registrierung
+
+# Question
+question.title=Business Informatics Group Jeopardy! - Fragenbeantwortung
+question.playerinfo=Spielerinformationen
+question.question=Frage:
+question.timeleft=Verbleibende Zeit:
+question.accessibility.jumptoquestionchoice=Zur Fragenauswahl springen
+question.accessibility.firstplayer=Führender Spieler
+question.accessibility.secondplayer=Zweiter Spieler
+question.accessibility.playerpoints=Spielerpunkte
+question.accessibility.playeravatar=Spieler-Avatar
