@@ -3,9 +3,8 @@ package model;
 import at.ac.tuwien.big.we15.lab2.api.Avatar;
 import at.ac.tuwien.big.we15.lab2.api.User;
 import play.data.validation.Constraints;
+import play.db.jpa.JPA;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.*;
 import java.util.Date;
 
@@ -102,5 +101,21 @@ public class LoginData implements User{
     @Override
     public void setAvatar(Avatar avatar) {
         this.avatar = avatar;
+    }
+
+    @play.db.jpa.Transactional
+    public static LoginData authenticate(String username, String password) {
+        LoginData foundUser = JPA.em().find(LoginData.class, username);
+        if (foundUser != null) {
+            if (foundUser.getPassword().equals(password)) {
+                //auth OK
+                return foundUser;
+            }
+            //auth failed
+            return null;
+        } else {
+            //Auth failed
+            return null;
+        }
     }
 }
