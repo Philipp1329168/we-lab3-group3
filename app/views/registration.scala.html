@@ -25,7 +25,7 @@
             <!-- Register section -->
         <h2 id="registerheading" class="accessibility">@Messages("registration.accessibility.signup")</h2>
 
-        <form action="login.xhtml" method="post">
+        <form action="@routes.RegistrationController.postRegistration()" method="post">
             <fieldset>
                 <legend>@Messages("registration.personaldata")</legend>
                 <label for="firstname">@Messages("registration.firstname")</label>
@@ -109,7 +109,7 @@
 
                 <div id="error_msg_password" class="hide" role="alert">@Messages("registration.password.error")
                 </div>
-                <input class="greenlink formlink" type="submit" value="@Messages("registration.signup")" accesskey="s"/>
+                <input class="greenlink formlink" type="submit" value="@Messages("registration.signup")" accesskey="s" />
 
                 <p id="requiredhint">@Messages("registration.datainfo")</p>
             </fieldset>
