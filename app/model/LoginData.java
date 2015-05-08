@@ -41,21 +41,7 @@ public class LoginData implements User{
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    private String avatar;
-
-    public String validate() {
-        System.out.println("validate LoginData");
-        if (!(gender.equals("male") || (gender.equals("female")))) {
-            return "Missing/wrong Gender";
-        }
-        if (noValidBirthdate(birthdate)) {
-            return "Birhdate is not valid";
-        }
-        if (getUserByName(name) != null) {
-            return "Username already taken";
-        }
-        return null;
-    }
+    private Avatar avatar;
 
     private boolean noValidBirthdate(Date birthdate) {
         Date rightNow = new Date();
@@ -123,13 +109,13 @@ public class LoginData implements User{
 
     @Override
     public Avatar getAvatar() {
-        return Avatar.getAvatar(avatar);
+        return avatar;
     }
 
 
     @Override
     public void setAvatar(Avatar avatar) {
-        this.avatar = avatar.getId();
+        this.avatar = avatar;
     }
 
     @play.db.jpa.Transactional

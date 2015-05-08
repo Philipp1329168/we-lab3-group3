@@ -24,9 +24,7 @@ public class RegistrationController extends Controller {
     public static Result postRegistration() {
         Form<LoginData> formData = form(LoginData.class).bindFromRequest();
         System.out.println(formData.toString());
-System.out.println("valid? "+formData.hasErrors());
         if(formData.hasErrors()) {
-            System.out.println("errors");
             return badRequest(registration.render(formData,checkSession()));
         } else {
             LoginData newData = formData.get();
