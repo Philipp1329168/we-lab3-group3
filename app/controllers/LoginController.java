@@ -38,7 +38,7 @@ public class LoginController extends Controller {
     }
 
     public static Result showLoginPage() {
-        return ok(authentication.render(form(LoginForm.class))));
+        return ok(authentication.render(form(LoginForm.class)));
     }
 
     @play.db.jpa.Transactional
