@@ -9,7 +9,7 @@ import play.mvc.Result;
 import play.mvc.Security;
 import views.html.authentication;
 
-import static models.LoginData.authenticate;
+import static model.LoginData.authenticate;
 import static play.data.Form.form;
 
 /**
@@ -50,7 +50,7 @@ public class LoginController extends Controller {
         } else {
             session().clear();
             session("username",formData.get().username);
-            return null;//redirect(routes.QuizController.showStartPage());
+            return redirect(routes.JeopardyController.showJeopardyPage());
         }
     }
 

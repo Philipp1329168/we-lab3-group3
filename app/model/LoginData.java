@@ -1,4 +1,4 @@
-package models;
+package model;
 
 import at.ac.tuwien.big.we15.lab2.api.Avatar;
 import at.ac.tuwien.big.we15.lab2.api.User;
@@ -15,7 +15,7 @@ import java.util.Date;
 @Entity
 public class LoginData implements User{
 
-    public enum Gender{MALE,FEMALE}
+    public enum Gender{male,female}
 
 
     @Id
@@ -38,24 +38,10 @@ public class LoginData implements User{
     @Temporal(TemporalType.DATE)
     private Date birthdate;
 
-    @Enumerated(value=EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private Gender gender;
 
     private Avatar avatar;
-
-    public String validate() {
-        System.out.println("validate LoginData");
-        if (!(gender.equals("m") || (gender.equals("f")))) {
-            return "Missing/wrong Gender";
-        }
-        if (noValidBirthdate(birthdate)) {
-            return "Birhdate is not valid";
-        }
-        if (getUserByName(name) != null) {
-            return "Username already taken";
-        }
-        return null;
-    }
 
     private boolean noValidBirthdate(Date birthdate) {
         Date rightNow = new Date();
@@ -125,6 +111,7 @@ public class LoginData implements User{
     public Avatar getAvatar() {
         return avatar;
     }
+
 
     @Override
     public void setAvatar(Avatar avatar) {

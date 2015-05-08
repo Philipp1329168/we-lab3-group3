@@ -3,6 +3,8 @@ logout=Abmelden
 accessibility.logininfo=Klicke hier um dich anzumelden
 accessibility.logoutinfo=Klicke hier um dich abzumelden
 accessibility.navigation=Navigation
+json.file = data.de.json
+
 
 # Authentication
 authentication.login=Login
