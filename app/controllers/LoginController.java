@@ -1,7 +1,7 @@
 package controllers;
 
 
-import model.LoginData;
+import models.LoginData;
 import play.api.mvc.Result;
 import play.data.Form;
 import play.data.validation.Constraints;
@@ -10,7 +10,7 @@ import play.mvc.Controller;
 import play.mvc.Security;
 import views.html.authentication;
 
-import static model.LoginData.authenticate;
+import static models.LoginData.authenticate;
 import static play.data.Form.form;
 
 /**

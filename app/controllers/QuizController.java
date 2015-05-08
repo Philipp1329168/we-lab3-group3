@@ -13,6 +13,6 @@ public class QuizController {
 
     @Security.Authenticated(SecurityAuthenticator.class)
     public static Result showStartPage() {
-        return ok(jeopardy.render());
+        return null// ok(jeopardy.render());
     }
 }

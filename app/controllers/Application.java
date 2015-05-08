@@ -1,9 +1,9 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
-
-import views.html.*;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.authentication;
+import views.html.index;
 
 public class Application extends Controller {
 
@@ -11,7 +11,7 @@ public class Application extends Controller {
         return ok(index.render("Welcome to Jeopardy"));
     }
     public static Result authentication() {
-        return ok(authentication.apply());
+        return ok(authentication.render());
     }
 
 }

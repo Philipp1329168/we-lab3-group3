@@ -1,6 +1,6 @@
 package controllers;
 
-import model.LoginData;
+import models.LoginData;
 import play.api.mvc.Result;
 import play.data.Form;
 import play.db.jpa.JPA;
