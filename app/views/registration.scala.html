@@ -26,6 +26,16 @@
         <h2 id="registerheading" class="accessibility">@Messages("registration.accessibility.signup")</h2>
 
         <form action="@routes.RegistrationController.postRegistration()" method="post">
+            @if(form.hasErrors) {
+                @if(form.errors.size() > 0) {
+                    @for((key, value) <- form.errors) {
+                        @key.toString() :
+                        @for(err <- value) {
+                            @err.message().toString()
+                        }
+                    }
+                } else {No error returned.}
+            }
             <fieldset>
                 <legend>@Messages("registration.personaldata")</legend>
                 <label for="firstname">@Messages("registration.firstname")</label>

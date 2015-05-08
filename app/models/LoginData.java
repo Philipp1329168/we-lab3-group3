@@ -8,6 +8,7 @@ import play.db.jpa.JPA;
 import javax.persistence.*;
 import java.util.Date;
 
+
 /**
  * Created by root on 07/05/15.
  */
@@ -41,6 +42,33 @@ public class LoginData implements User{
     private Gender gender;
 
     private Avatar avatar;
+
+    public String validate() {
+        System.out.println("validate LoginData");
+        if (!(gender.equals("m") || (gender.equals("f")))) {
+            return "Missing/wrong Gender";
+        }
+        if (noValidBirthdate(birthdate)) {
+            return "Birhdate is not valid";
+        }
+        if (getUserByName(name) != null) {
+            return "Username already taken";
+        }
+        return null;
+    }
+
+    private boolean noValidBirthdate(Date birthdate) {
+        Date rightNow = new Date();
+        if (birthdate == null) {
+            return false;
+        } else {
+            if (!birthdate.before(rightNow)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
 
 
     @Override
@@ -117,5 +145,9 @@ public class LoginData implements User{
             //Auth failed
             return null;
         }
+    }
+
+    private static LoginData getUserByName(String name) {
+        return JPA.em().find(LoginData.class, name);
     }
 }

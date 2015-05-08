@@ -8,6 +8,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.registration;
 
+
 import static play.data.Form.form;
 
 /**
@@ -21,9 +22,10 @@ public class RegistrationController extends Controller {
 
     @Transactional
     public static Result postRegistration() {
-        Form<LoginData> formData = Form.form(LoginData.class).bindFromRequest();
-
+        Form<LoginData> formData = form(LoginData.class).bindFromRequest();
+System.out.println("valid? "+formData.hasErrors());
         if(formData.hasErrors()) {
+            System.out.println("errors");
             return badRequest(registration.render(formData,checkSession()));
         } else {
             LoginData newData = formData.get();
