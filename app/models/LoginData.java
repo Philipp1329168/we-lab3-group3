@@ -1,4 +1,4 @@
-package model;
+package models;
 
 import at.ac.tuwien.big.we15.lab2.api.Avatar;
 import at.ac.tuwien.big.we15.lab2.api.User;
