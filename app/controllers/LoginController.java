@@ -50,7 +50,7 @@ public class LoginController extends Controller {
         } else {
             session().clear();
             session("username",formData.get().username);
-            return null;//redirect(routes.QuizController.showStartPage());
+            return redirect(routes.JeopardyController.showJeopardyPage());
         }
     }
 
