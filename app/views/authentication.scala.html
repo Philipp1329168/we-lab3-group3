@@ -3,7 +3,7 @@
 @main("Business Informatics Group Quiz - Login", "login-page") {
 
   <a class="accessibility" href="#login">@Messages("authentication.accessibility.jumptologin")</a>
-  <a class="accessibility" title="@Messages("authentication.accessibility.signup")" href="register.xhtml"
+  <a class="accessibility" title="@Messages("authentication.accessibility.signup")" href="@routes.RegistrationController.showRegistrationPage()"
   accesskey="r">@Messages("authentication.accessibility.signup")</a>
   <!-- Header -->
   <header role="banner" aria-labelledby="bannerheading">
