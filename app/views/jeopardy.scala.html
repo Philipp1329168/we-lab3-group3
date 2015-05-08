@@ -1,5 +1,5 @@
 @(game :at.ac.tuwien.big.we15.lab2.api.JeopardyGame)
-@import at.ac.tuwien.big.we15.lab2.api.Category
+
 @main(title = Messages("question.title"), "jeopardy-page") {
 
     <a class="accessibility" href="#question-selection">@Messages("question.accessibility.jumptoquestionchoice")</a>
@@ -64,7 +64,7 @@
 
             <!--from lab 2-->
 
-            <form id="questionform" action="null" method="post">
+            <form id="questionform" action="@routes.QuestionController.showQuestionPage()" method="post">
                 <fieldset>
 
                     <legend class="accessibility">@Messages("jeopardy.accessibility.choice")</legend>
