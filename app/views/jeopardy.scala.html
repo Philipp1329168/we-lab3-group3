@@ -1,5 +1,5 @@
 @(game :at.ac.tuwien.big.we15.lab2.api.JeopardyGame)
-@import at.ac.tuwien.big.we15.lab2.api.Category
+
 @main(title = Messages("question.title"), "jeopardy-page") {
 
     <a class="accessibility" href="#question-selection">@Messages("question.accessibility.jumptoquestionchoice")</a>
@@ -18,6 +18,7 @@
         </ul>
     </nav>
 
+
     <!-- Content -->
     <div role="main">
             <!-- info -->
@@ -25,29 +26,29 @@
             <h2 id="gameinfoinfoheading" class="accessibility">@Messages("question.playerinfo")</h2>
             <section id="firstplayer" class="playerinfo leader" aria-labelledby="firstplayerheading">
                 <h3 id="firstplayerheading" class="accessibility">@Messages("question.accessibility.firstplayer")</h3>
-                <img class="avatar" src="img/avatar/black-widow_head.png" alt="@Messages("question.accessibility.playeravatar") Black Widow" />
+                <img class="avatar" src="@routes.Assets.at("images/avatar/" + game.getHuman.getAvatar.getImageHead)" alt="@Messages("question.accessibility.playeravatar") Black Widow" />
                 <table>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playername")</th>
-                        <td class="playername">@{game.getHuman().getName()}(@Messages("question.you"))</td>
+                        <td class="playername">@game.getHuman.getAvatar.getName (@Messages("question.you"))</td>
                     </tr>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playerpoints")</th>
-                        <td class="playerpoints">2000 €</td>
+                        <td class="playerpoints">@game.getHumanPlayer.getProfit €</td>
                     </tr>
                 </table>
             </section>
             <section id="secondplayer" class="playerinfo" aria-labelledby="secondplayerheading">
                 <h3 id="secondplayerheading" class="accessibility">@Messages("question.accessibility.secondplayer")</h3>
-                <img class="avatar" src="img/avatar/deadpool_head.png" alt="@Messages("question.accessibility.playeravatar") Deadpool" />
+                <img class="avatar" src="@routes.Assets.at("images/avatar/" + game.getMarvin.getAvatar.getImageHead)" alt="@Messages("question.accessibility.playeravatar") Deadpool" />
                 <table>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playername")</th>
-                        <td class="playername">@game.getMarvin().getName();</td>
+                        <td class="playername">@game.getMarvin.getAvatar.getName</td>
                     </tr>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playerpoints")</th>
-                        <td class="playerpoints">400 €</td>
+                        <td class="playerpoints">@game.getMarvinPlayer.getProfit €</td>
                     </tr>
                 </table>
             </section>
@@ -63,7 +64,7 @@
 
             <!--from lab 2-->
 
-            <form id="questionform" action="null" method="post">
+            <form id="questionform" action="@routes.QuestionController.showQuestionPage()" method="post">
                 <fieldset>
 
                     <legend class="accessibility">@Messages("jeopardy.accessibility.choice")</legend>
