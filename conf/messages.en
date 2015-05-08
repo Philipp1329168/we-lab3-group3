@@ -3,6 +3,7 @@ logout=Logout
 accessibility.logininfo=Click here to login
 accessibility.logoutinfo=Click here to logout
 accessibility.navigation=Navigation
+json.file = data.en.json
 
 # Authentication
 authentication.login=Login

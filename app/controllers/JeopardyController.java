@@ -1,5 +1,10 @@
 package controllers;
 
+import at.ac.tuwien.big.we15.lab2.api.*;
+import at.ac.tuwien.big.we15.lab2.api.impl.PlayJeopardyFactory;
+
+import at.ac.tuwien.big.we15.lab2.api.impl.SimpleJeopardyGame;
+import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.jeopardy;
@@ -12,6 +17,8 @@ import static play.data.Form.form;
  */
 public class JeopardyController extends Controller {
     public static Result showJeopardyPage() {
-        return ok(jeopardy.render());
+        JeopardyFactory factory = new PlayJeopardyFactory(Messages.get("json.file"));
+        JeopardyGame game = new SimpleJeopardyGame(factory);
+        return ok(jeopardy.render(game));
     }
 }
