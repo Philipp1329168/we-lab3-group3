@@ -18,7 +18,7 @@ authentication.msg.logoutsuccess=Logout successfull
 # Registration
 registration.title=Business Informatics Group Quiz - Register
 registration.personaldata=Personal data
-registration.logindata=Login data
+registration.playerdata=Player data
 registration.firstname=Firstname:
 registration.lastname=Lastname:
 registration.birthdate=Birthdate:
