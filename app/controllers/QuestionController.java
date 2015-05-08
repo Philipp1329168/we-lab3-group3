@@ -4,19 +4,23 @@ import at.ac.tuwien.big.we15.lab2.api.*;
 import at.ac.tuwien.big.we15.lab2.api.impl.PlayJeopardyFactory;
 
 import at.ac.tuwien.big.we15.lab2.api.impl.SimpleJeopardyGame;
+import model.LoginData;
 import play.cache.Cache;
+import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
 import views.html.question;
+
+import static play.data.Form.form;
 
 /**
  * Created by root on 08/05/15.
  */
 
 public class QuestionController extends Controller {
-    public static Result showQuestionPage(){
-        SimpleJeopardyGame game = (SimpleJeopardyGame)Cache.get(session("username"));
+    public static Result showQuestionPage(SimpleJeopardyGame game){
+        game.chooseHumanQuestion(1);
         return ok(question.render(game, checkSession()));
     }
 
