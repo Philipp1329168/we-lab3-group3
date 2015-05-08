@@ -9,7 +9,7 @@ import play.mvc.Result;
 import play.mvc.Security;
 import views.html.authentication;
 
-import static models.LoginData.authenticate;
+import static model.LoginData.authenticate;
 import static play.data.Form.form;
 
 /**

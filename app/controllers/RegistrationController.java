@@ -1,6 +1,6 @@
 package controllers;
 
-import models.LoginData;
+import model.LoginData;
 import play.data.Form;
 import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
@@ -23,6 +23,7 @@ public class RegistrationController extends Controller {
     @Transactional
     public static Result postRegistration() {
         Form<LoginData> formData = form(LoginData.class).bindFromRequest();
+        System.out.println(formData.toString());
 System.out.println("valid? "+formData.hasErrors());
         if(formData.hasErrors()) {
             System.out.println("errors");

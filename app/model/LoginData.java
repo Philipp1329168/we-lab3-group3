@@ -1,4 +1,4 @@
-package models;
+package model;
 
 import at.ac.tuwien.big.we15.lab2.api.Avatar;
 import at.ac.tuwien.big.we15.lab2.api.User;
@@ -15,7 +15,7 @@ import java.util.Date;
 @Entity
 public class LoginData implements User{
 
-    public enum Gender{MALE,FEMALE}
+    public enum Gender{male,female}
 
 
     @Id
@@ -38,14 +38,14 @@ public class LoginData implements User{
     @Temporal(TemporalType.DATE)
     private Date birthdate;
 
-    @Enumerated(value=EnumType.STRING)
+    @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    private Avatar avatar;
+    private String avatar;
 
     public String validate() {
         System.out.println("validate LoginData");
-        if (!(gender.equals("m") || (gender.equals("f")))) {
+        if (!(gender.equals("male") || (gender.equals("female")))) {
             return "Missing/wrong Gender";
         }
         if (noValidBirthdate(birthdate)) {
@@ -123,12 +123,13 @@ public class LoginData implements User{
 
     @Override
     public Avatar getAvatar() {
-        return avatar;
+        return Avatar.getAvatar(avatar);
     }
+
 
     @Override
     public void setAvatar(Avatar avatar) {
-        this.avatar = avatar;
+        this.avatar = avatar.getId();
     }
 
     @play.db.jpa.Transactional
