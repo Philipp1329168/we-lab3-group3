@@ -4,7 +4,7 @@ accessibility.logininfo=Klicke hier um dich anzumelden
 accessibility.logoutinfo=Klicke hier um dich abzumelden
 accessibility.navigation=Navigation
 
-# Registration
+# Authentication
 authentication.login=Login
 authentication.username=Benutzername:
 authentication.password=Passwort:
@@ -41,9 +41,28 @@ registration.accessibility.signup=Registrierung
 question.title=Business Informatics Group Jeopardy! - Fragenbeantwortung
 question.playerinfo=Spielerinformationen
 question.question=Frage:
+question.you=Du
 question.timeleft=Verbleibende Zeit:
 question.accessibility.jumptoquestionchoice=Zur Fragenauswahl springen
 question.accessibility.firstplayer=Führender Spieler
 question.accessibility.secondplayer=Zweiter Spieler
+question.accessibility.playername=Spielername
 question.accessibility.playerpoints=Spielerpunkte
 question.accessibility.playeravatar=Spieler-Avatar
+
+# Jeopardy
+jeopardy.title=Business Informatics Group Jeopardy! - Fragenauswahl
+jeopardy.choose=wählen
+jeopardy.lastgame=Letztes Spiel:
+jeopardy.lastgame.no=Nie
+jeopardy.accessibility.lastgameinfo=Letztes Spielinfo
+jeopardy.accessibility.choice=Fragenauswahl
+jeopardy.accessibility.category=Kategorie:
+
+# Winner
+winner.title=Business Informatics Group Jeopardy! - Gewinnanzeige
+winner.jump=Zur Gewinnanzeige springen
+winner.info=Gewinnerinformationen
+winner.winner=Gewinner:
+winner.loser=Verlierer:
+winner.newgame=Neues Spiel
