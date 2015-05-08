@@ -29,7 +29,7 @@
                 <table>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playername")</th>
-                        <td class="playername">Black Widow (@Messages("question.you"))</td>
+                        <td class="playername">@{game.getHuman().getName()}(@Messages("question.you"))</td>
                     </tr>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playerpoints")</th>
@@ -43,7 +43,7 @@
                 <table>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playername")</th>
-                        <td class="playername">Deadpool</td>
+                        <td class="playername">@game.getMarvin().getName();</td>
                     </tr>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playerpoints")</th>
