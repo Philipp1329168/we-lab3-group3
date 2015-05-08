@@ -1,12 +1,11 @@
 package controllers;
 
 
-import models.LoginData;
-import play.api.mvc.Result;
 import play.data.Form;
 import play.data.validation.Constraints;
 import play.i18n.Messages;
 import play.mvc.Controller;
+import play.mvc.Result;
 import play.mvc.Security;
 import views.html.authentication;
 
@@ -39,7 +38,7 @@ public class LoginController extends Controller {
     }
 
     public static Result showLoginPage() {
-        return ok(authentication.render(form(LoginData.class)));
+        return ok(authentication.render(form(LoginForm.class))));
     }
 
     @play.db.jpa.Transactional
@@ -51,7 +50,7 @@ public class LoginController extends Controller {
         } else {
             session().clear();
             session("username",formData.get().username);
-            return redirect(routes.QuizController.showStartPage());
+            return null;//redirect(routes.QuizController.showStartPage());
         }
     }
 

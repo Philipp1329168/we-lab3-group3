@@ -158,7 +158,7 @@
 	                var lastGameMillis = parseInt(localStorage['lastGame']);
 	                if(!isNaN(parseInt(localStorage['lastGame']))){
 	                    var lastGame = new Date(lastGameMillis);
-	                	$("#lastgame p").replaceWith('<p>@Messages("jeopardy.lastgame") <time datetime="'
+	                	$("#lastgame p").replaceWith('<p>@{Messages("jeopardy.lastgame")+ " "}<time datetime="'
 	                			+ lastGame.toUTCString()
 	                			+ '">'
 	                			+ lastGame.toLocaleString()
