@@ -1,3 +1,6 @@
+@(game :at.ac.tuwien.big.we15.lab2.api.JeopardyGame, sessionLogIn: Boolean)
+
+
 @main(title = Messages("question.title"), "question-page") {
 
 
@@ -13,8 +16,13 @@
     <nav role="navigation" aria-labelledby="navheading">
         <h2 id="navheading" class="accessibility">@Messages("accessibility.navigation")</h2>
         <ul>
+        @if(sessionLogIn == false) {
+            <li><a class="orangelink navigationlink" id="loginlink" title="@Messages("accessibility.logininfo")"
+            href="@routes.LoginController.showLoginPage()" accesskey="l">@Messages("login")</a></li>
+        } else {
             <li><a class="orangelink navigationlink" id="logoutlink" title="@Messages("accessibility.logoutinfo")"
-            href="login.xhtml" accesskey="l">@Messages("logout")</a></li>
+            href="@routes.LoginController.logout()" accesskey="l">@Messages("logout")</a></li>
+        }
         </ul>
     </nav>
 
@@ -25,7 +33,7 @@
             <h2 id="gameinfoinfoheading" class="accessibility">@Messages("question.playerinfo")</h2>
             <section id="firstplayer" class="playerinfo leader" aria-labelledby="firstplayerheading">
                 <h3 id="firstplayerheading" class="accessibility">@Messages("question.accessibility.firstplayer")</h3>
-                <img class="avatar" src="img/avatar/black-widow_head.png" alt="@Messages("question.accessibility.playeravatar") Black Widow"/>
+                <img class="avatar" src="@routes.Assets.at("images/avatar/aldrich-killian.png")" alt="@Messages("question.accessibility.playeravatar") Black Widow"/>
                 <table>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playername")</th>
@@ -39,7 +47,7 @@
             </section>
             <section id="secondplayer" class="playerinfo" aria-labelledby="secondplayerheading">
                 <h3 id="secondplayerheading" class="accessibility">@Messages("question.accessibility.secondplayer")</h3>
-                <img class="avatar" src="img/avatar/deadpool_head.png" alt="@Messages("question.accessibility.playeravatar") Deadpool"/>
+                <img class="avatar" src="@routes.Assets.at("images/avatar/aldrich-killian.png")" alt="@Messages("question.accessibility.playeravatar") Deadpool"/>
                 <table>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playername")</th>
