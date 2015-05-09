@@ -36,8 +36,6 @@
                     @for((key, value) <- form.errors) {
                         @key.toString() :
                         @for(err <- value) {
-                            @System.out.println("\nErroMsg");
-                            @System.out.println(err.message().toString());
                             @err.message().toString()
                         }
                     }
@@ -48,8 +46,6 @@
                     @for((key, value) <- user.errors) {
                         @key.toString() :
                         @for(err <- value) {
-                            @System.out.println("\nErroMsg");
-                            @System.out.println(err.message().toString());
                             @err.message().toString()
                         }
                     }
