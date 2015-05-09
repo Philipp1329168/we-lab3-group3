@@ -2,6 +2,7 @@ package model;
 
 import at.ac.tuwien.big.we15.lab2.api.Avatar;
 import at.ac.tuwien.big.we15.lab2.api.User;
+import controllers.RegistrationController;
 import play.data.validation.Constraints;
 import play.db.jpa.JPA;
 
@@ -129,12 +130,46 @@ public class LoginData implements User{
             //auth failed
             return null;
         } else {
-            //Auth failed
+            //auth failed
             return null;
+        }
+    }
+
+    @play.db.jpa.Transactional
+    public static boolean checkUserExists(String username) {
+
+        System.out.println(username);
+
+        LoginData foundUser = JPA.em().find(LoginData.class, username);
+
+        System.out.println(foundUser);
+
+        if (foundUser == null) {
+                System.out.println("\nUser is still NULL!!");
+                 System.out.println(foundUser);
+                return true;
+            }
+        else {
+            System.out.println("Found User!!");
+            System.out.println(foundUser);
+            return false;
         }
     }
 
     private static LoginData getUserByName(String name) {
         return JPA.em().find(LoginData.class, name);
+    }
+
+    @Override
+    public String toString() {
+        return "LoginData{" +
+                "name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", birthdate=" + birthdate +
+                ", gender=" + gender +
+                ", avatar=" + avatar +
+                '}';
     }
 }
