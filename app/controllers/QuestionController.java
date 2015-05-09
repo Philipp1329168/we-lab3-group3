@@ -22,12 +22,11 @@ import static play.data.Form.form;
 public class QuestionController extends Controller {
     @Security.Authenticated(SecurityAuthenticator.class)
     public static Result showQuestionPage(){
-        JeopardyGame game = (JeopardyGame)Cache.get("username");
+        JeopardyGame game = (JeopardyGame)Cache.get(session("username"));
+        System.out.println(game.getHuman().getName());
         DynamicForm requ = Form.form().bindFromRequest();
         int number = Integer.parseInt(requ.get("question_selection"));
-        System.out.println(number);
         game.chooseHumanQuestion(number);
-        System.out.println(number);
         return ok(question.render(game, checkSession()));
     }
 
