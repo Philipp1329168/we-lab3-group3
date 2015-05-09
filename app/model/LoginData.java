@@ -145,13 +145,9 @@ public class LoginData implements User{
         System.out.println(foundUser);
 
         if (foundUser == null) {
-                System.out.println("\nUser is still NULL!!");
-                 System.out.println(foundUser);
                 return true;
             }
         else {
-            System.out.println("Found User!!");
-            System.out.println(foundUser);
             return false;
         }
     }
