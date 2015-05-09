@@ -14,7 +14,7 @@ GET         /register            controllers.RegistrationController.showRegistra
 POST        /register            controllers.RegistrationController.postRegistration()
 
 GET         /jeopardy            controllers.JeopardyController.showJeopardyPage()
-GET         /question            controllers.QuestionController.showQuestionPage()
+POST         /question            controllers.QuestionController.showQuestionPage()
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file        controllers.Assets.at(path="/public", file)
 
