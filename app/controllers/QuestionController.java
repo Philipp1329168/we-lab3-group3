@@ -19,7 +19,9 @@ import static play.data.Form.form;
  */
 
 public class QuestionController extends Controller {
-    public static Result showQuestionPage(SimpleJeopardyGame game){
+    @Security.Authenticated(SecurityAuthenticator.class)
+    public static Result showQuestionPage(){
+        JeopardyGame game = (JeopardyGame)Cache.get("username");
         game.chooseHumanQuestion(1);
         return ok(question.render(game, checkSession()));
     }
