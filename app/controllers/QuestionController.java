@@ -1,19 +1,16 @@
 package controllers;
 
-import at.ac.tuwien.big.we15.lab2.api.*;
-import at.ac.tuwien.big.we15.lab2.api.impl.PlayJeopardyFactory;
-
-import at.ac.tuwien.big.we15.lab2.api.impl.SimpleJeopardyGame;
-import model.LoginData;
+import at.ac.tuwien.big.we15.lab2.api.JeopardyGame;
 import play.cache.Cache;
-import play.data.DynamicForm;
-import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
+import views.html.jeopardy;
 import views.html.question;
+import views.html.winner;
 
-import static play.data.Form.form;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by root on 08/05/15.
@@ -23,11 +20,33 @@ public class QuestionController extends Controller {
     @Security.Authenticated(SecurityAuthenticator.class)
     public static Result showQuestionPage(){
         JeopardyGame game = (JeopardyGame)Cache.get(session("username"));
-        System.out.println(game.getHuman().getName());
-        DynamicForm requ = Form.form().bindFromRequest();
-        int number = Integer.parseInt(requ.get("question_selection"));
+        String[] postRequest = request().body().asFormUrlEncoded().get("question_selection");
+
+        int number = Integer.parseInt(postRequest[0]);
         game.chooseHumanQuestion(number);
+
         return ok(question.render(game, checkSession()));
+    }
+
+    @Security.Authenticated(SecurityAuthenticator.class)
+    public static Result checkQuestion() {
+        JeopardyGame game = (JeopardyGame)Cache.get(session("username"));
+        List<Integer> intValues = new ArrayList<Integer>();
+
+        if(game.isAnswerPending()) {
+            String[] postRequest = request().body().asFormUrlEncoded().get("answers");
+
+            for(int i=0;i<postRequest.length;i++)
+                intValues.add(Integer.parseInt(postRequest[i]));
+
+            game.answerHumanQuestion(intValues);
+        }
+
+       if(game.isGameOver()) {
+            return ok(winner.render(game));
+        } else {
+            return ok(jeopardy.render(game));
+        }
     }
 
     private static boolean checkSession() {     // nur für temporäre Zwecke

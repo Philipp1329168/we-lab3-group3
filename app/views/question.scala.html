@@ -64,7 +64,7 @@
 
             <!-- Question -->
         <section id="question" aria-labelledby="questionheading">
-            <form id="questionform" action="jeopardy.xhtml" method="get">
+            <form id="questionform" action="@routes.QuestionController.checkQuestion()" method="post">
                 <h2 id="questionheading" class="accessibility">@Messages("question.question")</h2>
 
                 <p id="questiontype">@game.getHumanPlayer.getChosenQuestion.getCategory.getName @Messages("question.for") € @game.getHumanPlayer.getChosenQuestion.getValue</p>

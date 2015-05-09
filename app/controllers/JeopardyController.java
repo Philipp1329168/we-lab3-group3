@@ -1,21 +1,18 @@
 package controllers;
 
-import at.ac.tuwien.big.we15.lab2.api.*;
+import at.ac.tuwien.big.we15.lab2.api.JeopardyFactory;
+import at.ac.tuwien.big.we15.lab2.api.JeopardyGame;
 import at.ac.tuwien.big.we15.lab2.api.impl.PlayJeopardyFactory;
-
 import at.ac.tuwien.big.we15.lab2.api.impl.SimpleJeopardyGame;
 import model.LoginData;
 import play.cache.Cache;
 import play.db.jpa.JPA;
-import play.db.jpa.Transactional;
 import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
 import views.html.jeopardy;
-
-import static model.LoginData.authenticate;
-import static play.data.Form.form;
+import views.html.winner;
 
 /**
  * Created by root on 08/05/15.
@@ -27,6 +24,9 @@ public class JeopardyController extends Controller {
     public static Result showJeopardyPage() {
         JeopardyGame game = createGame();
         Cache.set(session("username"), game);
+
+
+
         return ok(jeopardy.render(game));
     }
 
@@ -37,6 +37,10 @@ public class JeopardyController extends Controller {
         game.getHuman().setName(user.getName());
         game.getHuman().setAvatar(user.getAvatar());
         return game;
+    }
+
+    public static Result showWinnerPage() {
+        return ok(winner.render(game));
     }
 
 }
