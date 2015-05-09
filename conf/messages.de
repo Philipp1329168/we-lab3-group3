@@ -61,6 +61,7 @@ question.accessibility.playeravatar=Spieler-Avatar
 # Jeopardy
 jeopardy.title=Business Informatics Group Jeopardy! - Fragenauswahl
 jeopardy.choose=wählen
+jeopardy.userinfo=Du hast noch nicht geantwortet. Beginne mit dem Spiel!
 jeopardy.lastgame=Letztes Spiel:
 jeopardy.lastgame.no=Nie
 jeopardy.accessibility.lastgameinfo=Letztes Spielinfo
