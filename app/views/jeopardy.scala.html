@@ -52,16 +52,31 @@
                     </tr>
                 </table>
             </section>
-            <p id="round">@Messages("question.question") 2 / 10</p>
+            <p id="round">@Messages("question.question") @(game.getHumanPlayer.getAnsweredQuestions.size() + 1) / 10</p>
         </section>
 
             <!-- Question -->
         <section id="question-selection" aria-labelledby="questionheading">
             <h2 id="questionheading" class="black accessibility">Jeopardy</h2>
-            <p class="user-info positive-change">Du hast richtig geantwortet: +1000 €</p>
-            <p class="user-info negative-change">Deadpool hat falsch geantwortet: -500 €</p>
-            <p class="user-info">Deadpool hat TUWIEN für € 1000 gewählt.</p>
 
+            @if(game.getHumanPlayer.getAnsweredQuestions.size()<1){
+                <p class="user-info">Du hast noch nicht geantwortet. Beginne mit dem Spiel!</p>
+            }else{
+                @if(game.getHumanPlayer.getLatestProfitChange<0) {
+                    <p class="user-info negative-change">@Messages("question.youfalse") @game.getHumanPlayer.getLatestProfitChange €</p>
+                }else{
+                    <p class="user-info positive-change">@Messages("question.youright") @game.getHumanPlayer.getLatestProfitChange €</p>
+                }
+            }
+
+            @if(game.getHumanPlayer.getAnsweredQuestions.size()<1) {
+            }else{
+                @if(game.getMarvinPlayer.getLatestProfitChange>0) {
+                    <p class="user-info positive-change">@game.getMarvin.getName @Messages("question.marvinright") @game.getMarvinPlayer.getLatestProfitChange €</p>
+                }else {
+                    <p class="user-info negative-change">@game.getMarvin.getName @Messages("question.marvinfalse") @game.getMarvinPlayer.getLatestProfitChange €</p>
+                }
+            }
             <!--from lab 2-->
 
             <form id="questionform" action="@routes.QuestionController.showQuestionPage()" method="post">

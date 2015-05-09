@@ -26,34 +26,41 @@
         <section id="gameinfo" aria-labelledby="winnerinfoheading">
             <h2 id="winnerinfoheading" class="accessibility">@Messages("winner.info")</h2>
 
-            <p class="user-info positive-change">Du hast richtig geantwortet: +1000 €</p>
-
-            <p class="user-info negative-change">Deadpool hat falsch geantwortet: -500 €</p>
+            @if(game.getHumanPlayer.getLatestProfitChange > 0) {
+                <p class="user-info positive-change">@Messages("question.youright") @game.getHumanPlayer.getLatestProfitChange €</p>
+            } else {
+                <p class="user-info negative-change">@Messages("question.youfalse") @game.getHumanPlayer.getLatestProfitChange €</p>
+            }
+            @if(game.getMarvinPlayer.getLatestProfitChange > 0) {
+                <p class="user-info positive-change">@game.getMarvin.getName @Messages("question.marvinright") @game.getMarvinPlayer.getLatestProfitChange €</p>
+            } else {
+                <p class="user-info negative-change">@game.getMarvin.getName @Messages("question.marvinfalse") @game.getMarvinPlayer.getLatestProfitChange €</p>
+            }
             <section class="playerinfo leader" aria-labelledby="winnerannouncement">
-                <h3 id="winnerannouncement">@Messages("winner.winner") Black Widow</h3>
+                <h3 id="winnerannouncement">@Messages("winner.winner") @game.getWinner.getUser.getName</h3>
                 <img class="avatar" src="@routes.Assets.at("images/avatar/" + game.getWinner.getUser.getAvatar.getImageHead)" alt="@Messages("question.accessibility.playeravatar") @game.getWinner.getUser.getAvatar.getName"/>
                 <table>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playername")</th>
-                        <td class="playername">Black Widow</td>
+                        <td class="playername">@game.getWinner.getUser.getName</td>
                     </tr>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playerpoints")</th>
-                        <td class="playerpoints">€ 2000</td>
+                        <td class="playerpoints">€ @game.getWinner.getProfit</td>
                     </tr>
                 </table>
             </section>
             <section class="playerinfo" aria-labelledby="loserheading">
-                <h3 id="loserheading" class="accessibility">@Messages("winner.loser") Deadpool</h3>
+                <h3 id="loserheading" class="accessibility">@Messages("winner.loser") @game.getLoser.getUser.getName</h3>
                 <img class="avatar" src="@routes.Assets.at("images/avatar/" + game.getWinner.getUser.getAvatar.getImageHead)" alt="@Messages("question.accessibility.playeravatar") @game.getWinner.getUser.getAvatar.getName"/>
                 <table>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playername")</th>
-                        <td class="playername">Deadpool</td>
+                        <td class="playername">@game.getLoser.getUser.getName</td>
                     </tr>
                     <tr>
                         <th class="accessibility">@Messages("question.accessibility.playerpoints")</th>
-                        <td class="playerpoints">€ 400</td>
+                        <td class="playerpoints">€ @game.getLoser.getProfit</td>
                     </tr>
                 </table>
             </section>
