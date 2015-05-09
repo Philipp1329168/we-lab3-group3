@@ -29,7 +29,6 @@ public class RegistrationController extends Controller {
             }
             return null;
         }
-
     }
 
     public static Result showRegistrationPage() {
@@ -45,7 +44,6 @@ public class RegistrationController extends Controller {
         else {
             LoginData newData = formData.get();
             JPA.em().persist(newData);
-            System.out.println("pers done");
             return redirect(routes.LoginController.showLoginPage());
         }
     }

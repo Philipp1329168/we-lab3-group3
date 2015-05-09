@@ -23,9 +23,6 @@ public class JeopardyController extends Controller {
     public static Result showJeopardyPage() {
         JeopardyGame game = createGame();
         Cache.set(session("username"), game);
-
-
-
         return ok(jeopardy.render(game));
     }
 
