@@ -60,6 +60,7 @@ question.accessibility.playeravatar=Player-Avatar
 # Jeopardy
 jeopardy.title=Business Informatics Group Jeopardy! - Choose Question
 jeopardy.choose=choose
+jeopardy.userinfo=You haven't answered yet. Start with the game!
 jeopardy.lastgame=Last game:
 jeopardy.lastgame.no=Never
 jeopardy.accessibility.lastgameinfo=Last Gameinfo
