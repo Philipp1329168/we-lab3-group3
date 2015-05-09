@@ -16,13 +16,7 @@
     <nav role="navigation" aria-labelledby="navheading">
         <h2 id="navheading" class="accessibility">@Messages("accessibility.navigation")</h2>
         <ul>
-        @if(sessionLogIn == false) {
-            <li><a class="orangelink navigationlink" id="loginlink" title="@Messages("accessibility.logininfo")"
-            href="@routes.LoginController.showLoginPage()" accesskey="l">@Messages("login")</a></li>
-        } else {
-            <li><a class="orangelink navigationlink" id="logoutlink" title="@Messages("accessibility.logoutinfo")"
-            href="@routes.LoginController.logout()" accesskey="l">@Messages("logout")</a></li>
-        }
+            <li><a class="orangelink navigationlink" id="logoutlink" title="@Messages("accessibility.logoutinfo")" href="@routes.LoginController.logout()" accesskey="l">@Messages("logout")</a></li>
         </ul>
     </nav>
 
@@ -59,7 +53,7 @@
                     </tr>
                 </table>
             </section>
-            <p id="round">@Messages("question.question") @(game.getHumanPlayer.getAnsweredQuestions.size() + 1) / 10</p>
+            <p id="round">@Messages("question.question") @(game.getHumanPlayer.getAnsweredQuestions.size() + 1) / 5</p>
         </section>
 
             <!-- Question -->
