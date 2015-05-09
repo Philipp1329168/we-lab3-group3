@@ -66,7 +66,7 @@
         <section id="newgame" aria-labelledby="newgameheading">
             <h2 id="newgameheading" class="accessibility">@Messages("winner.newgame")</h2>
 
-            <form action="jeopardy.xhtml" method="post">
+            <form action="@routes.JeopardyController.showJeopardyPage()" method="get">
                 <input class="clickable orangelink contentlink" id="new_game" type="submit" name="restart"
                 value="@Messages("winner.newgame")"/>
             </form>
