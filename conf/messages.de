@@ -21,14 +21,14 @@ authentication.msg.logoutsuccess=Abmelden erfolgreich
 
 # Registration
 registration.title=Business Informatics Group Quiz - Registrieren
-registration.personaldata=Persönliche Daten
+registration.personaldata=PersÃ¶nliche Daten
 registration.playerdata=Spielerdaten
 registration.firstname=Vorname:
 registration.lastname=Nachname:
 registration.birthdate=Geburtstag:
 registration.birthdate.error=Verwenden Sie bitte folgendes Datumsformat: yyyy-mm-dd (z.B. 1992-02-25).
 registration.gender=Geschlecht:
-registration.gender.male=Männlich
+registration.gender.male=MÃ¤nnlich
 registration.gender.female=Weiblich
 registration.username=Benutzername*:
 registration.username.error=Der Benutzername muss mindestens 4 Zeichen und darf maximal 8 Zeichen enthalten.
@@ -45,14 +45,14 @@ question.title=Business Informatics Group Jeopardy! - Fragenbeantwortung
 question.playerinfo=Spielerinformationen
 question.question=Frage:
 question.you=Du
-question.for=für
+question.for=fÃ¼r
 question.timeleft=Verbleibende Zeit:
 question.youright=Du hast richtig geantwortet:
 question.youfalse=Du hast falsch geantwortet:
 question.marvinright=hat richtig geantwortet:
 question.marvinfalse=hat falsch geantwortet:
 question.accessibility.jumptoquestionchoice=Zur Fragenauswahl springen
-question.accessibility.firstplayer=Führender Spieler
+question.accessibility.firstplayer=FÃ¼hrender Spieler
 question.accessibility.secondplayer=Zweiter Spieler
 question.accessibility.playername=Spielername
 question.accessibility.playerpoints=Spielerpunkte
@@ -60,7 +60,7 @@ question.accessibility.playeravatar=Spieler-Avatar
 
 # Jeopardy
 jeopardy.title=Business Informatics Group Jeopardy! - Fragenauswahl
-jeopardy.choose=wählen
+jeopardy.choose=wÃ¤hlen
 jeopardy.lastgame=Letztes Spiel:
 jeopardy.lastgame.no=Nie
 jeopardy.accessibility.lastgameinfo=Letztes Spielinfo
