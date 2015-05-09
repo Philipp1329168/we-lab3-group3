@@ -37,6 +37,7 @@ registration.signup=Sign up
 registration.datainfo=With "*" marked fields are required
 registration.accessibility.jumptoregister=Jump to sign up
 registration.accessibility.signup=Sign up
+registration.msg.invalid=Username already exists.
 
 # Question
 question.title=Business Informatics Group Jeopardy! - Answer Question

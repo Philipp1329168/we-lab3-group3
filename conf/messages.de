@@ -38,6 +38,7 @@ registration.signup=Registrieren
 registration.datainfo=Mit "*" gekennzeichnete Felder sind Pflichtfelder
 registration.accessibility.jumptoregister=Zur Registrierung springen
 registration.accessibility.signup=Registrierung
+registration.msg.invalid=Benutzername ist bereits vergeben.
 
 # Question
 question.title=Business Informatics Group Jeopardy! - Fragenbeantwortung
