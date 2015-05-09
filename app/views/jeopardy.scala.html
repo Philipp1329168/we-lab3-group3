@@ -86,7 +86,7 @@
 
                     @for(iterCategory <- game.getCategories) {
                         <section class="questioncategory" aria-labelledby="@{iterCategory.getName.trim()}heading">
-                        <h3 id="@{iterCategory.getName.trim()}heading" class="tile category-title"><span class="accessibility">Kategorie: </span>@iterCategory.getName</h3>
+                        <h3 id="@{iterCategory.getName.trim()}heading" class="tile category-title"><span class="accessibility">@Messages("jeopardy.accessibility.category") </span>@iterCategory.getName</h3>
                         <ol class="category_questions">
                             @for(iterQuestion <- iterCategory.getQuestions()) {
                             <li><input name="question_selection" id="question_@{iterQuestion.getId}" value="@iterQuestion.getId()" type="radio" @if(game.hasBeenChosen(iterQuestion)){ disabled="disabled"}/>
