@@ -137,13 +137,7 @@ public class LoginData implements User{
 
     @play.db.jpa.Transactional
     public static boolean checkUserExists(String username) {
-
-        System.out.println(username);
-
         LoginData foundUser = JPA.em().find(LoginData.class, username);
-
-        System.out.println(foundUser);
-
         if (foundUser == null) {
                 return true;
             }
