@@ -40,8 +40,12 @@ public class QuestionController extends Controller {
         if(game.isAnswerPending()) {
             String[] postRequest = request().body().asFormUrlEncoded().get("answers");
 
-            for(int i=0;i<postRequest.length;i++)
-                intValues.add(Integer.parseInt(postRequest[i]));
+            if(postRequest!=null) {
+                for(int i=0;i<postRequest.length;i++)
+                    intValues.add(Integer.parseInt(postRequest[i]));
+            } else {
+                intValues.add(-1);
+            }
 
             game.answerHumanQuestion(intValues);
         }
