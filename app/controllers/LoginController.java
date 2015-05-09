@@ -58,7 +58,6 @@ public class LoginController extends Controller {
     @Security.Authenticated(SecurityAuthenticator.class)
     public static Result logout() {
         session().clear();
-        flash("success", "You've been logged out");
         return redirect(routes.LoginController.showLoginPage());
     }
 }
