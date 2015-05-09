@@ -44,6 +44,7 @@ question.title=Business Informatics Group Jeopardy! - Fragenbeantwortung
 question.playerinfo=Spielerinformationen
 question.question=Frage:
 question.you=Du
+question.for=für
 question.timeleft=Verbleibende Zeit:
 question.accessibility.jumptoquestionchoice=Zur Fragenauswahl springen
 question.accessibility.firstplayer=Führender Spieler
