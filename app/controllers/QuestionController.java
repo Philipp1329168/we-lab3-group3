@@ -22,10 +22,14 @@ public class QuestionController extends Controller {
         JeopardyGame game = (JeopardyGame)Cache.get(session("username"));
         String[] postRequest = request().body().asFormUrlEncoded().get("question_selection");
 
-        int number = Integer.parseInt(postRequest[0]);
-        game.chooseHumanQuestion(number);
+        if(postRequest!=null) {
+            int number = Integer.parseInt(postRequest[0]);
+            game.chooseHumanQuestion(number);
 
-        return ok(question.render(game, checkSession()));
+            return ok(question.render(game, checkSession()));
+        }
+
+        return ok(jeopardy.render(game));
     }
 
     @Security.Authenticated(SecurityAuthenticator.class)
