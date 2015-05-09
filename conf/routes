@@ -15,7 +15,6 @@ POST        /register            controllers.RegistrationController.postRegistra
 
 GET         /jeopardy            controllers.JeopardyController.showJeopardyPage()
 
-GET         /winner              controllers.JeopardyController.showWinnerPage()
 
 POST        /question            controllers.QuestionController.showQuestionPage()
 POST        /questionc           controllers.QuestionController.checkQuestion()

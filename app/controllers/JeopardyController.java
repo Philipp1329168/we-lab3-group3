@@ -12,7 +12,6 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
 import views.html.jeopardy;
-import views.html.winner;
 
 /**
  * Created by root on 08/05/15.
@@ -39,8 +38,6 @@ public class JeopardyController extends Controller {
         return game;
     }
 
-    public static Result showWinnerPage() {
-        return ok(winner.render(game));
-    }
+
 
 }
